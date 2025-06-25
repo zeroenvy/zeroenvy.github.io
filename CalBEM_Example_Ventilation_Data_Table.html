@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Table</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.3/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/5.0.0/css/fixedColumns.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.1.1/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/2.3.1/css/searchPanes.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/2.0.4/css/select.dataTables.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.3/js/dataTables.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/3.1.1/js/dataTables.buttons.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.html5.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.1/js/buttons.dataTables.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/searchpanes/2.3.1/js/dataTables.searchPanes.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/searchpanes/2.3.1/js/searchPanes.dataTables.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/select/2.0.4/js/dataTables.select.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/select/2.0.4/js/select.dataTables.js" type="text/javascript"></script>
+
+    <style>
+        html {
+            font-family: Roboto, Verdana, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+    <table border="1" class="dataframe data-table compact display dataTable">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Space Name</th>
+      <th>Conditioning Type</th>
+      <th>Space Function</th>
+      <th>Ventilation Flow Rate (cfm)</th>
+      <th>Ventilation Flow Rate Density (cfm/ft<sup>2</sup>)</th>
+      <th>Baseline Ventilation Flow Rate (cfm)</th>
+      <th>Baseline Ventilation Flow Rate Density (cfm/ft<sup>2</sup>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100  Secure Public Lobby Transient Space_10000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>279</td>
+      <td>0.150000</td>
+      <td>279</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>100A  Main Entry Security Transient Space_10000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>232</td>
+      <td>0.150000</td>
+      <td>232</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>100B  Stairs B_10000002</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>100C  Stairs C_10000003</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>100D  Stairs D_10000004</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>100F  Vending_10000005</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>20</td>
+      <td>0.150000</td>
+      <td>20</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>100G  Public Elevator_10000006</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>100H  Corridor 2_10000007</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>390</td>
+      <td>0.204940</td>
+      <td>390</td>
+      <td>0.20494</td>
+    </tr>
+    <tr>
+      <td>101  Secure Storage_10000008</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>13</td>
+      <td>0.150000</td>
+      <td>13</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>103  Lactation_10000009</td>
+      <td>DirectlyConditioned</td>
+      <td>Lounge, Breakroom, or Waiting Area</td>
+      <td>56</td>
+      <td>0.150000</td>
+      <td>56</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>104  Restrooms_1000000A</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>110  Jury Services_11000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>1590</td>
+      <td>0.150000</td>
+      <td>1590</td>
+      <td>0.914845</td>
+    </tr>
+    <tr>
+      <td>111  Vending_11000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>37</td>
+      <td>0.150000</td>
+      <td>37</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>112  Copy Printer Supply Room_11000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>14</td>
+      <td>0.150000</td>
+      <td>14</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>120  Reception  Waiting Room_12000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&gt;250 square feet)</td>
+      <td>34</td>
+      <td>0.150000</td>
+      <td>34</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>120C  Shared Conference Room_12000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>248</td>
+      <td>0.150000</td>
+      <td>248</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>120D  Copy Printer Supply Room_12000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>8</td>
+      <td>0.000000</td>
+      <td>8</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>120F  Play Area_12000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Lounge, Breakroom, or Waiting Area</td>
+      <td>85</td>
+      <td>0.150000</td>
+      <td>85</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>120G  Interview_12000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>32</td>
+      <td>0.150000</td>
+      <td>32</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>130  Interpreter Lounge  Workstations_13000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&gt;250 square feet)</td>
+      <td>35</td>
+      <td>0.150000</td>
+      <td>35</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>140  Clerk Workstations_14000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>1429</td>
+      <td>0.150000</td>
+      <td>1429</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>140B  Copy Room_14000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>15</td>
+      <td>0.150000</td>
+      <td>15</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>140F  Stairs A_14000002</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>141  Queuing  Seating_14000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>106</td>
+      <td>0.150000</td>
+      <td>106</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td>142  Historic Record  Wills_14000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>66</td>
+      <td>0.150000</td>
+      <td>66</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>143  Exhibits Room_14000005</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>37</td>
+      <td>0.150000</td>
+      <td>37</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>144  Supervisor Office_14000006</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>145  Supervisor Office_14000007</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>146  Collections Manager Office_14000008</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>147  Analysis Manager_14000009</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>21</td>
+      <td>0.150000</td>
+      <td>21</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>148  Manager Office_1400000A</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>25</td>
+      <td>0.150000</td>
+      <td>25</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>150  Judge Entry Corridor_15000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>85</td>
+      <td>0.150000</td>
+      <td>85</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>150A  Staff Elevator_15000001</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>151  Staff Shower_15000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Locker Room</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>152  Staff Lactation_15000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Lounge, Breakroom, or Waiting Area</td>
+      <td>42</td>
+      <td>0.150000</td>
+      <td>42</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>154  Restrooms_15000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>160  Sherrif Lounge_16000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Lounge, Breakroom, or Waiting Area</td>
+      <td>126</td>
+      <td>0.150000</td>
+      <td>126</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>160A  Copy_16000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>13</td>
+      <td>0.150000</td>
+      <td>13</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>161  Management Office_16000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>17</td>
+      <td>0.150000</td>
+      <td>17</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>162  MDF_16000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>163  Secure Equipment  Armory_16000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>21</td>
+      <td>0.150000</td>
+      <td>21</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>165  Lockerooms_16000005</td>
+      <td>DirectlyConditioned</td>
+      <td>Locker Room</td>
+      <td>225</td>
+      <td>0.000000</td>
+      <td>225</td>
+      <td>0.577664</td>
+    </tr>
+    <tr>
+      <td>170  Corridor_17000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>246</td>
+      <td>0.150000</td>
+      <td>246</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>171  Housekeeping Storage_17000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>205</td>
+      <td>1.000000</td>
+      <td>205</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>172  Building Maintenance_17000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>38</td>
+      <td>0.150000</td>
+      <td>38</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>173  UPS_17000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>175  General Buidling Storage_17000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>62</td>
+      <td>0.150000</td>
+      <td>62</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>176  Main Electrical_17000005</td>
+      <td>DirectlyConditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>177  Emergency Electrical_17000006</td>
+      <td>Unconditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>178  Water Room_17000007</td>
+      <td>Unconditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>179  Mailroom_17000008</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>27</td>
+      <td>0.150000</td>
+      <td>27</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>180  Corridor_18000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>186</td>
+      <td>0.150000</td>
+      <td>186</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>180A  Secure Elevator A_18000001</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>180B  Secure Elevator B_18000002</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>180C  Holding Vestibule_18000003</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>29</td>
+      <td>0.150000</td>
+      <td>29</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>181  Central Control_18000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>181B  Vestibule_18000005</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>12</td>
+      <td>0.150000</td>
+      <td>12</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>182B  ADA Holding_18000006</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>20</td>
+      <td>0.150000</td>
+      <td>20</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>183A  ADA Holding_18000007</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>19</td>
+      <td>0.150000</td>
+      <td>19</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>183B  Holding_18000008</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>17</td>
+      <td>0.150000</td>
+      <td>17</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>184A  ADA Holding_18000009</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>21</td>
+      <td>0.150000</td>
+      <td>21</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>184B  Holding_1800000A</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>185A  Holding_1800000B</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>16</td>
+      <td>0.150000</td>
+      <td>16</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>185B  Remand Holding_1800000C</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>14</td>
+      <td>0.150000</td>
+      <td>14</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>186  Sallyport_1800000D</td>
+      <td>Unconditioned</td>
+      <td>Parking Garage Area (Parking Zone and Ramps)</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>186A Sallyport_1800000E</td>
+      <td>Unconditioned</td>
+      <td>Parking Garage Area (Parking Zone and Ramps)</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>187  Juvinile Holding_1800000F</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>45</td>
+      <td>0.150000</td>
+      <td>45</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>187A  ADA Holding_18000010</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>13</td>
+      <td>0.150000</td>
+      <td>13</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>187A  Probation Supervisor_18000011</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>12</td>
+      <td>0.150000</td>
+      <td>12</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>188B  Individual Holding_18000012</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>13</td>
+      <td>0.150000</td>
+      <td>13</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>189A  Individual Holding_18000013</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>10</td>
+      <td>0.150000</td>
+      <td>10</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>189B  ADA Holding_18000014</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>14</td>
+      <td>0.150000</td>
+      <td>14</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>190  Vestibule_19000000</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>17</td>
+      <td>0.150000</td>
+      <td>17</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>191  Custodial_19000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>132</td>
+      <td>1.000000</td>
+      <td>132</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>193  Staff Restroom_19000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>194  Attorney  Client_19000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>30</td>
+      <td>0.150000</td>
+      <td>30</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>291  Training Room_29000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>300</td>
+      <td>0.150000</td>
+      <td>300</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>290  Breakroom_29000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Lounge, Breakroom, or Waiting Area</td>
+      <td>356</td>
+      <td>0.150000</td>
+      <td>356</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>285  Shaft_28000007</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>284  Courtroom Soundlock Vestibule_28000006</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>23</td>
+      <td>0.150000</td>
+      <td>23</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>283  ADA Holding Cell_28000005</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>15</td>
+      <td>0.150000</td>
+      <td>15</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>282  Holding Cell_28000004</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>15</td>
+      <td>0.150000</td>
+      <td>15</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>281  Interview_28000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>17</td>
+      <td>0.150000</td>
+      <td>17</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>280B  Secure Elevator B_28000002</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>280A  Secure Elevator A_28000001</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>280  Holding Core B_28000000</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>27</td>
+      <td>0.150000</td>
+      <td>27</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>270D  Courtroom Vestibule_27000004</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>14</td>
+      <td>0.000000</td>
+      <td>14</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>270B  Attorney Client Conference_27000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>23</td>
+      <td>0.150000</td>
+      <td>23</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>270A  Attorney Client Conference_27000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>27</td>
+      <td>0.150000</td>
+      <td>27</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>270  Large Trial Courtroom_27000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>1320</td>
+      <td>0.150000</td>
+      <td>1320</td>
+      <td>0.600153</td>
+    </tr>
+    <tr>
+      <td>270  Exhibit_27000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>8</td>
+      <td>0.150000</td>
+      <td>8</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>260C  Exhibit_26000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>8</td>
+      <td>0.150000</td>
+      <td>8</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>260B  Attorney Client Conference_26000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>14</td>
+      <td>0.150000</td>
+      <td>14</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>260A  Attorney Client Conference_26000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>25</td>
+      <td>0.150000</td>
+      <td>25</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>260  Multipurpose Courtroom_26000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>1020</td>
+      <td>0.150000</td>
+      <td>1020</td>
+      <td>0.488319</td>
+    </tr>
+    <tr>
+      <td>259A  Restroom_25000010</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>259  Chamber_2500000F</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>68</td>
+      <td>0.150000</td>
+      <td>68</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td>258B  Custodial_2500000E</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>12</td>
+      <td>0.150000</td>
+      <td>12</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>258A  Supply Room_2500000D</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>11</td>
+      <td>0.150000</td>
+      <td>11</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>257  Jury_2500000C</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>176</td>
+      <td>0.150000</td>
+      <td>176</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>256  Restrooms_2500000B</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>256  Chamber_2500000A</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>66</td>
+      <td>0.150000</td>
+      <td>66</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td>255  Court Reporters_25000009</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&gt;250 square feet)</td>
+      <td>65</td>
+      <td>0.150000</td>
+      <td>65</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>254A  Restrooms_25000008</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>254  Chamber_25000007</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>67</td>
+      <td>0.150000</td>
+      <td>67</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td>253  Jury_25000006</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>180</td>
+      <td>0.150000</td>
+      <td>180</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>252A  Restroom_25000005</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>252  Chamber_25000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>70</td>
+      <td>0.150000</td>
+      <td>70</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td>251  Restrooms_25000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>250A  Staff Elevator_25000002</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>250  Corridor 2_25000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>125</td>
+      <td>0.150000</td>
+      <td>125</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>250  Corridor 1_25000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>222</td>
+      <td>0.150000</td>
+      <td>222</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>243  Elec_24000002</td>
+      <td>Unconditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>242  Shaft_24000001</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>240  IDF_24000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>230C  Exhibit_23000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>9</td>
+      <td>0.150000</td>
+      <td>9</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>230B  Attorney Client Conference_23000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>25</td>
+      <td>0.150000</td>
+      <td>25</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>230A  Attorney Client Conference_23000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>13</td>
+      <td>0.150000</td>
+      <td>13</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>230  Multipurpose Courtroom_23000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>930</td>
+      <td>0.150000</td>
+      <td>930</td>
+      <td>0.460968</td>
+    </tr>
+    <tr>
+      <td>225  Shaft_22000005</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>224  Courtroom Soundlock Vestibule_22000004</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>30</td>
+      <td>0.150000</td>
+      <td>30</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>223  ADA Holding Cell_22000003</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>18</td>
+      <td>0.150000</td>
+      <td>18</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>222  Holding Cell_22000002</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>17</td>
+      <td>0.150000</td>
+      <td>17</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>221  Interview_22000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>19</td>
+      <td>0.150000</td>
+      <td>19</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>220  Holding Core B_22000000</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>30</td>
+      <td>0.150000</td>
+      <td>30</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>210C  Exhibit_21000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>9</td>
+      <td>0.150000</td>
+      <td>9</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>210B  Attorney Client Conference_21000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>13</td>
+      <td>0.150000</td>
+      <td>13</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>210A  Attorney Client Conference_21000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>210  Multipurpose Courtroom_21000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>930</td>
+      <td>0.150000</td>
+      <td>930</td>
+      <td>0.428128</td>
+    </tr>
+    <tr>
+      <td>205  Restrooms_20000008</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>202  Family Restroom_20000007</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>200G  Public Elevator_20000006</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>200D  Stairs D_20000005</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>200C  Stairs C_20000004</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>200B  Stairs B_20000003</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>200A  Stairs A_20000002</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>200  Corridor 2_20000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>326</td>
+      <td>0.150000</td>
+      <td>326</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>200  Corridor 1_20000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>255</td>
+      <td>0.182796</td>
+      <td>255</td>
+      <td>0.182796</td>
+    </tr>
+    <tr>
+      <td>396  Small Conference Room_3900000C</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>84</td>
+      <td>0.150000</td>
+      <td>84</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>395  Court Exec Office_3900000B</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>52</td>
+      <td>0.150000</td>
+      <td>52</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>394  Account Records Storage_3900000A</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>52</td>
+      <td>0.150000</td>
+      <td>52</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>393  IT Workroom Storage_39000009</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>41</td>
+      <td>0.150000</td>
+      <td>41</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>392C  HR Analyst_39000008</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>392B  Family Mediator_39000007</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>21</td>
+      <td>0.150000</td>
+      <td>21</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>392A  Probate Investigator_39000006</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>391C  Admin Coordinator_39000005</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>391B  IT  Manager Office_39000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>24</td>
+      <td>0.150000</td>
+      <td>24</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>391A  Chief Financial Officer_39000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>22</td>
+      <td>0.150000</td>
+      <td>22</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>390C  Copy Supply Work Room_39000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>19</td>
+      <td>0.150000</td>
+      <td>19</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>390A  Reception Waiting Area Office_39000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&gt;250 square feet)</td>
+      <td>178</td>
+      <td>0.500000</td>
+      <td>178</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>390  Accounting  IT Workstations_39000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&gt;250 square feet)</td>
+      <td>237</td>
+      <td>0.150000</td>
+      <td>237</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>385  Shaft_38000005</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>384  Courtroom Soundlock Vestibule_38000004</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>23</td>
+      <td>0.150000</td>
+      <td>23</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>381A  Interview_38000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>17</td>
+      <td>0.150000</td>
+      <td>17</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>380B  Secure Elevator B_38000002</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>380A  Secure Elevator A_38000001</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>380  Holding Core B_38000000</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>56</td>
+      <td>0.150000</td>
+      <td>56</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>360C  Exhibit_36000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>8</td>
+      <td>0.150000</td>
+      <td>8</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>360B  Attorney Client Conference_36000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>14</td>
+      <td>0.150000</td>
+      <td>14</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>360A  Attorney Client Conference_36000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>25</td>
+      <td>0.150000</td>
+      <td>25</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>360  Juvi Courtroom_36000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>930</td>
+      <td>0.150000</td>
+      <td>930</td>
+      <td>0.445232</td>
+    </tr>
+    <tr>
+      <td>359  Judicial Conference_35000010</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>311</td>
+      <td>0.150000</td>
+      <td>311</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>358B  Custodial_3500000F</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>12</td>
+      <td>0.150000</td>
+      <td>12</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>358A  Supply Room_3500000E</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>11</td>
+      <td>0.150000</td>
+      <td>11</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>357A  Restrooms_3500000D</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>357  Jury_3500000C</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>176</td>
+      <td>0.150000</td>
+      <td>176</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>356  Chamber_3500000B</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>65</td>
+      <td>0.150000</td>
+      <td>65</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td>355  Comm Office_3500000A</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>41</td>
+      <td>0.150000</td>
+      <td>41</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>354A  Restrooms_35000009</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>354  Chamber_35000008</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>67</td>
+      <td>0.150000</td>
+      <td>67</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td>353  Jury_35000007</td>
+      <td>DirectlyConditioned</td>
+      <td>Convention, Conference, Multipurpose and Meeting Area</td>
+      <td>180</td>
+      <td>0.150000</td>
+      <td>180</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>352A  Restroom_35000006</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>352  Chamber_35000005</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>70</td>
+      <td>0.150000</td>
+      <td>70</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td>351  Restrooms_35000004</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>350B  Elevator Control Room_35000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>350A  Staff Elevator_35000002</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>350  Corridor 2_35000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>198</td>
+      <td>0.150000</td>
+      <td>198</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>350  Corridor 1_35000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>125</td>
+      <td>0.150000</td>
+      <td>125</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>343  Elec_34000002</td>
+      <td>Unconditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>342  Shaft_34000001</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>340  IDF_34000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>330C  Exhibit_33000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>9</td>
+      <td>0.150000</td>
+      <td>9</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>330B  Attorney Client Conference_33000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>25</td>
+      <td>0.150000</td>
+      <td>25</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>330A  Attorney Client Conference_33000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>13</td>
+      <td>0.150000</td>
+      <td>13</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>330  Multipurpose Courtroom_33000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>930</td>
+      <td>0.150000</td>
+      <td>930</td>
+      <td>0.460969</td>
+    </tr>
+    <tr>
+      <td>325  Shaft_32000005</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>324  Courtroom Soundblock Vestibule_32000004</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>30</td>
+      <td>0.150000</td>
+      <td>30</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>323  ADA Holding Cell_32000003</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>18</td>
+      <td>0.150000</td>
+      <td>18</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>322  Holding Cell_32000002</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>17</td>
+      <td>0.150000</td>
+      <td>17</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>321  Interview_32000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>19</td>
+      <td>0.150000</td>
+      <td>19</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>320  Holding Core B_32000000</td>
+      <td>DirectlyConditioned</td>
+      <td>All other</td>
+      <td>30</td>
+      <td>0.150000</td>
+      <td>30</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>310C  Exhibit_31000003</td>
+      <td>DirectlyConditioned</td>
+      <td>Storage, General</td>
+      <td>9</td>
+      <td>0.150000</td>
+      <td>9</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>310B  Attorney Client Conference_31000002</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>13</td>
+      <td>0.150000</td>
+      <td>13</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>310A  Attorney Client Conference_31000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Office Area (&lt;250 square feet)</td>
+      <td>27</td>
+      <td>0.150000</td>
+      <td>27</td>
+      <td>0.15</td>
+    </tr>
+    <tr>
+      <td>310  Multipurpose Courtroom_31000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Civic Meeting Place Area</td>
+      <td>930</td>
+      <td>0.150000</td>
+      <td>930</td>
+      <td>0.434935</td>
+    </tr>
+    <tr>
+      <td>304  Restrooms_30000008</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>302  Family Restroom_30000007</td>
+      <td>DirectlyConditioned</td>
+      <td>Restrooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>300G  Public Elevator_30000006</td>
+      <td>Unconditioned</td>
+      <td>Unoccupied-Include in Gross Floor Area</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>300D  Stairs D_30000005</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>300C  Stairs C_30000004</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>300B  Stairs B_30000003</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>300A  Stairs A_30000002</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <td>300  Corridor 2_30000001</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>315</td>
+      <td>0.150000</td>
+      <td>315</td>
+      <td>0.154346</td>
+    </tr>
+    <tr>
+      <td>300  Corridor 1_30000000</td>
+      <td>DirectlyConditioned</td>
+      <td>Corridor Area</td>
+      <td>345</td>
+      <td>0.247312</td>
+      <td>345</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>480  Boiler Room_48000000</td>
+      <td>Unconditioned</td>
+      <td>Electrical, Mechanical, Telephone Rooms</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>400A  Stairs_40000000</td>
+      <td>Unconditioned</td>
+      <td>Stairwell</td>
+      <td>0</td>
+      <td>0.000000</td>
+      <td>0</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+    <script>
+        new DataTable('.data-table', {
+            fixedColumns: true,
+            paging: true,
+            lengthChange: false,
+            pageLength: 25,
+            scrollCollapse: true,
+            scrollX: true,
+            scrollY: 500,
+            ordering: true,
+            bfilter: true,
+            columnDefs: [
+                { targets: '_all', className: 'dt-head-center'},
+            ],
+            buttons: [
+                'copy', 'csv',
+            ],
+            layout: {
+                topStart: 'buttons',
+                topEnd: null,
+                top1: {
+                    searchPanes: {
+                        columns: [1, 2],
+                        viewTotal: true,
+                        initCollapsed: true,
+                    }
+                },
+            },
+        });
+    </script>
+</body>
+
+
+</html>
